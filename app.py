@@ -34,7 +34,7 @@ if st.button("送信"):
     if input_text.strip():
         with st.spinner("回答を生成中..."):
             response = get_llm_response(input_text, expert_type)
-        st.success("以下が専門家からの回答です：")
+        st.success(f"以下が{expert_type}からの回答です：")
         st.write(response)
     else:
         st.error("質問を入力してください。")
